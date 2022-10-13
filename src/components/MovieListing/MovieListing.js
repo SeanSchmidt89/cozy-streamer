@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { movieSliceActions } from "../../store/movieSlice";
 import baseUrl from "../../api/baseUrl";
 import apiKey from "../../api/apiKey";
+import MovieCard from "../MovieCard.js/MovieCard";
 import "./MovieListing.css";
 
 const MovieListing = () => {
@@ -17,15 +18,21 @@ const MovieListing = () => {
         .catch((error) => {
           console.log("Error message:", error);
         });
-      console.log("store", response.data.Search);
-      if(response.request.status === 200){
-        dispatch(movieSliceActions.addMovies(response.data.Search));
+      if (response.request.status === 200) {
+        dispatch(movieSliceActions.addMovies(response.data));
       }
-      
     };
     getMovies();
   }, [dispatch]);
-  return <div>MovieListing</div>;
+  console.log(movies);
+  return (
+    <div className="container">
+      {movies.Search &&
+        movies.Search.map((movie, index) => (
+          <MovieCard key={index} movie={movie} />
+        ))}
+    </div>
+  );
 };
 
 export default MovieListing;
