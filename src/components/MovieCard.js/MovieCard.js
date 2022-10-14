@@ -9,10 +9,11 @@ const MovieCard = ({ movie }) => {
       </div>
       <div className="lower">
         <p>{movie.Title}.</p>
-        <p>{movie.Year}</p>
       </div>
     </div>
   );
 };
 
 export default MovieCard;
+
+//box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;

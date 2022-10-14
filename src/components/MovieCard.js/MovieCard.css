@@ -12,7 +12,8 @@
 
 .upper img {
     height: 90%;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 11px 50px 6px;
+    
     border-radius: 18px;
 }
 
@@ -24,9 +25,14 @@
     align-items: center;
 }
 
+.lower p{
+    padding: 0.5rem;
+}
+
 .upper img:hover {
     height: 100%;
     cursor: pointer;
-    transition-delay: 250ms;
+    box-shadow: rgba(255, 255, 255, 0.60) 0px 11px 50px 6px;
+    transition-delay: 950ms;
     transition: 2.3s;
 }
