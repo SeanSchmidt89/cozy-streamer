@@ -12,6 +12,7 @@
 
 .upper img {
     height: 90%;
+    width: 65%;
     box-shadow: rgba(255, 255, 255, 0.25) 0px 11px 50px 6px;
     
     border-radius: 18px;
@@ -31,8 +32,9 @@
 
 .upper img:hover {
     height: 100%;
+    width: 75%;
     cursor: pointer;
-    box-shadow: rgba(255, 255, 255, 0.60) 0px 11px 50px 6px;
+    box-shadow: rgba(255, 255, 255, 0.65) 0px 11px 50px 6px;
     transition-delay: 950ms;
     transition: 2.3s;
 }
