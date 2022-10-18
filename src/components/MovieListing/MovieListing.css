@@ -1,41 +1,48 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    padding: 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 0 5rem;
 }
 
 .search {
-    padding: 4rem 0;
+  padding: 4rem 0;
 }
 
 .search input {
-    outline: none;
-    border: 0.8px solid white;
-    background-color: transparent;
-    color: white;
-    padding: 0.5rem;
+  outline: none;
+  border: 0.8px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem;
 }
 
 .search input:focus {
-    outline: none;
+  outline: none;
 }
 
 .search-btn {
-    padding: 0.5rem;
-    background-color: transparent;
-    color: white;
-    border: 0.8px solid white;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: white;
+  border: 0.8px solid white;
 }
 
 .search-btn:hover {
-    cursor: pointer;
-    padding: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    color: black;
-    border: 0.8px solid white;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  border: 0.8px solid white;
 }
 
 .error {
-    font-size: 1.2rem;
-    padding-bottom: 40rem;
+  font-size: 1.2rem;
+  padding-bottom: 40rem;
+}
+
+h2 {
+  margin-bottom: 4rem;
+  margin-left: 6rem;
+  margin-top: 2rem;
+  text-align: left;
 }
