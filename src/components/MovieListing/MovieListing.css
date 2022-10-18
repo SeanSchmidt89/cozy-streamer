@@ -5,7 +5,11 @@
 }
 
 .search {
-  padding: 4rem 0;
+  display: flex;
+  justify-content: right;
+  margin-right: 8rem;
+  padding-top: 4.5rem;
+  padding-bottom: 1rem;
 }
 
 .search input {
@@ -30,8 +34,8 @@
 .search-btn:hover {
   cursor: pointer;
   padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  color: black;
+  background-color: #9681FF;
+  color: white;
   border: 0.8px solid white;
 }
 
@@ -41,8 +45,10 @@
 }
 
 h2 {
-  margin-bottom: 4rem;
-  margin-left: 6rem;
+  margin-bottom: 3rem;
+  margin-left: 8rem;
   margin-top: 2rem;
+  font-size: 1.8rem;
   text-align: left;
+  text-decoration: underline;
 }

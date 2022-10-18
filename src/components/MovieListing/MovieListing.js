@@ -11,13 +11,14 @@ const MovieListing = () => {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
   const searchMovies = useSelector((state) => state.movies.search);
+  const random = useSelector((state) => state.movies.random);
   const [inputText, setInputText] = useState("");
 
   useEffect(() => {
     axios.get(requests.popular).then((response) => {
       dispatch(movieSliceActions.addMovies(response.data.results));
     });
-  }, [dispatch]);
+  }, [dispatch, movies]);
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -33,6 +34,7 @@ const MovieListing = () => {
         dispatch(movieSliceActions.searchMovies(response.data.results));
       });
     setInputText("");
+
   };
   return (
     <div>
@@ -48,7 +50,7 @@ const MovieListing = () => {
           </button>
         </form>
       </div>
-      {searchMovies.length > 1 ? <h2>Search</h2> : null}
+      {searchMovies.length > 1 ? <h2>Search Results</h2> : null}
       <div className="container">
         {searchMovies
           ? searchMovies.map((item, index) => (
