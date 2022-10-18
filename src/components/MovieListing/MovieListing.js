@@ -1,76 +1,42 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { movieSliceActions } from "../../store/movieSlice";
-import baseUrl from "../../api/baseUrl";
-import apiKey from "../../api/apiKey";
+import axios from "axios";
 import MovieCard from "../MovieCard.js/MovieCard";
+import requests from "../../api/requests";
+import { movieSliceActions } from "../../store/movieSlice";
 import "./MovieListing.css";
 
 const MovieListing = () => {
-  const [inputText, setInputText] = useState("");
-  const [search, setSearch] = useState("star wars");
-  const dispatch = useDispatch();
-  const movies = useSelector((state) => state.movies.movies);
-
-  const getMovies = async () => {
-    const response = await baseUrl
-      .get(`?apikey=${apiKey}&type=movie&s=${search}`)
-      .catch((error) => {
-        console.log("Error message:", error);
-      });
-    if (response.request.status === 200) {
-      dispatch(movieSliceActions.addMovies(response.data));
-    }
-  };
+  //const dispatch = useDispatch();
+  //const movies = useSelector((state) => state.movies.movies);
+  const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    const getMovies = async () => {
-      const response = await baseUrl
-        .get(`?apikey=${apiKey}&type=movie&s=${search}`)
-        .catch((error) => {
-          console.log("Error message:", error);
-        });
-      if (response.request.status === 200) {
-        dispatch(movieSliceActions.addMovies(response.data));
-      }
-    };
-    getMovies();
-  }, [dispatch, search, setSearch]);
+    axios.get(requests.popular).then((response) => {
+      //dispatch(movieSliceActions.addMovies(response.data.results));
+      setMovies(response.data.results)
+    });
+  }, []);
+  console.log(movies);
 
-  const inputHandler = (e) => {
-    setInputText(e.target.value);
-  };
-
-  const searchMoviesHandler = (e) => {
-    e.preventDefault();
-    setSearch(inputText);
-    getMovies();
-    setInputText("");
-  };
   return (
     <div>
       <div className="search">
-        <form onSubmit={searchMoviesHandler}>
-          <input
-            onChange={inputHandler}
-            value={inputText}
-            placeholder="Search Moives"
-          />
+        <form>
+          <input placeholder="Search Moives" />
           <button type="submit" className="search-btn">
             Search
           </button>
         </form>
       </div>
-
-      {movies.Search ? (
-        <div className="container">
-          {movies.Search.map((movie, index) => (
-            <MovieCard key={index} movie={movie} />
-          ))}
-        </div>
-      ) : (
-        <p className="error">Cound'nt find anything with that title...</p>
-      )}
+      <div className="container">
+        {movies ? (
+          movies.map((item, index) => <MovieCard key={index} item={item} />)
+        ) : (
+          <p>not here</p>
+        )}
+        
+      </div>
     </div>
   );
 };
