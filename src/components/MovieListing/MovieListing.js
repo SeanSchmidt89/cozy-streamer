@@ -11,14 +11,13 @@ const MovieListing = () => {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
   const searchMovies = useSelector((state) => state.movies.search);
-  const random = useSelector((state) => state.movies.random);
   const [inputText, setInputText] = useState("");
 
   useEffect(() => {
     axios.get(requests.popular).then((response) => {
       dispatch(movieSliceActions.addMovies(response.data.results));
     });
-  }, [dispatch, movies]);
+  }, [dispatch]);
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -34,10 +33,28 @@ const MovieListing = () => {
         dispatch(movieSliceActions.searchMovies(response.data.results));
       });
     setInputText("");
-
   };
+
+  const movieRandom = Math.floor(Math.random() * movies.length + 1);
+  console.log("random", movieRandom);
+  console.log("movie length", movies.length);
+
   return (
     <div>
+      {movies.length > 0 && (
+        <div className="back-drop">
+          <div className="hi"></div>
+          <h2>{movies[movieRandom].title}</h2>
+          <img
+            className="cover"
+            src={`https://image.tmdb.org/t/p/original/${movies[movieRandom].backdrop_path}`}
+            alt={movies[movieRandom].title}
+          />
+          <div className="discription">
+            <p>{movies[movieRandom].overview}</p>
+          </div>
+        </div>
+      )}
       <div className="search">
         <form onSubmit={searchHandler}>
           <input

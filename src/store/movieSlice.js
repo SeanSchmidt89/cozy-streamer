@@ -13,9 +13,9 @@ const movieSlice = createSlice({
     addMovies: (state, action) => {
       state.movies = action.payload;
     },
-    searchMovies: (state, action) => {
-      state.search = action.payload;
-    },
+    // searchMovies: (state, action) => {
+    //   state.search = action.payload;
+    // },
   },
 });
 
