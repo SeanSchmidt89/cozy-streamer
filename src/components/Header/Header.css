@@ -21,3 +21,24 @@
   font-size: 2.1rem;
   font-weight: 600;
 }
+
+@media screen and (max-width: 725px){
+  .header {
+    padding: 0 1.3rem;
+    height: 85px;
+    width: 100%;
+    background-color: #866FF9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home-link {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .link {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+}

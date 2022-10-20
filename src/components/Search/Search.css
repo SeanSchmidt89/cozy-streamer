@@ -38,7 +38,37 @@
         display: flex;
         justify-content: center;
         margin-left: 12rem;
-        padding-top: 4.5rem;
+        padding-top: 3.5rem;
         padding-bottom: 1rem;
+      }
+}
+
+@media screen and (max-width: 725px){
+    .search {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+      }
+      
+      .search input {
+        outline: none;
+        border: 0.8px solid white;
+        background-color: transparent;
+        color: white;
+        padding: 0.2rem;
+      }
+      .search-btn {
+        padding: 0.2rem;
+        background-color: transparent;
+        color: white;
+        border: 0.8px solid white;
+      }
+      
+      .search-btn:hover {
+        cursor: pointer;
+        padding: 0.2rem;
+        background-color: #9681ff;
+        color: white;
+        border: 0.8px solid white;
       }
 }
