@@ -10,14 +10,31 @@ import "./MovieListing.css";
 
 const MovieListing = () => {
   const dispatch = useDispatch();
-  const movies = useSelector((state) => state.movies.movies);
+  const movies = useSelector((state) => state.movies.popular);
+  const topRated = useSelector((state) => state.movies.topRated);
   const searchMovies = useSelector((state) => state.movies.search);
+  const latest = useSelector((state) => state.movies.latest);
 
   useEffect(() => {
     axios.get(requests.popular).then((response) => {
-      dispatch(movieSliceActions.addMovies(response.data.results));
+      dispatch(movieSliceActions.addPopular(response.data.results));
     });
   }, [dispatch]);
+
+  useEffect(() => {
+    axios.get(requests.topRated).then((response) => {
+      dispatch(movieSliceActions.addTopRated(response.data.results));
+    });
+  }, [dispatch]);
+
+  useEffect(() => {
+    axios.get(requests.latest).then((response) => {
+      dispatch(movieSliceActions.addLatest(response.data.results));
+    });
+  }, [dispatch]);
+
+  console.log("topRated obj", latest);
+  console.log("toprated length", latest.length);
 
   return (
     <div>
@@ -30,6 +47,22 @@ const MovieListing = () => {
               <MovieCard key={index} item={item} />
             ))
           : null}
+      </div>
+      <h2>Now Playing</h2>
+      <div className="container">
+        {latest.length > 1 ? (
+          latest.map((item, index) => <MovieCard key={index} item={item} />)
+        ) : (
+          <p>Count not Load titles...</p>
+        )}
+      </div>
+      <h2>Top Rated</h2>
+      <div className="container">
+        {topRated.length > 1 ? (
+          topRated.map((item, index) => <MovieCard key={index} item={item} />)
+        ) : (
+          <p>Count not Load titles...</p>
+        )}
       </div>
       <h2>Most Popular</h2>
       <div className="container">

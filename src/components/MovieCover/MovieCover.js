@@ -3,10 +3,9 @@ import { useSelector } from "react-redux";
 import "./MovieCover.css";
 
 const MovieCover = () => {
-  const movies = useSelector((state) => state.movies.movies);
+  const movies = useSelector((state) => state.movies.popular);
   const movieRandom = Math.floor(Math.random() * movies.length + 1);
-  console.log("random", movieRandom);
-  console.log("movie length", movies.length);
+  
   return (
     <div>
       {movies.length > 0 && (
