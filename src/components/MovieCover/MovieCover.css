@@ -152,3 +152,84 @@
     margin-top: 2rem;
   }
 }
+
+@media screen and (max-width:  725px){
+  .cover-movie {
+    width: 100%;
+    height: 600px;
+    margin: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    margin: 0 0;
+    padding: 8rem;
+    font-size: 2rem;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.98) 15%,
+      rgba(0, 0, 0, 0.80) 25%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 17%;
+  }
+
+  .title {
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 2.2rem;
+    max-width: 180px;
+  }
+  
+  .title p {
+    display: inline;
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    text-align: left;
+    margin-left: 2rem;
+    max-width: 180px;
+  }
+  
+  .description p {
+    display: inline;
+    font-size: 0.6rem;
+  }
+  
+  .btns-container {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .btns-container button {
+    padding: 0.4rem 1rem;
+    margin-right: 1.5rem;
+    background-color: transparent;
+    color: white;
+    font-size: .8rem;
+    border: 2px solid #9681ff;
+  }
+  
+  .btns-container button:hover {
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+    margin-right: 1.5rem;
+    background-color: #9681ff;
+    color: white;
+    font-size: 0.8rem;
+    border: 2px solid #9681ff;
+  }
+}
+
