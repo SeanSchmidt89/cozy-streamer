@@ -5,7 +5,7 @@ import "./MovieCover.css";
 const MovieCover = () => {
   const movies = useSelector((state) => state.movies.popular);
   const movieRandom = Math.floor(Math.random() * movies.length + 1);
-  
+
   return (
     <div>
       {movies.length > 0 && (
@@ -25,6 +25,9 @@ const MovieCover = () => {
             <div className="btns-container">
               <button>View</button>
               <button>+ My List</button>
+            </div>
+            <div className="rating">
+              {<p>Rating {movies[movieRandom].vote_average * 10}%</p>}
             </div>
           </div>
         </div>
