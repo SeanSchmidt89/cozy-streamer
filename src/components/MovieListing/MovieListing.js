@@ -55,7 +55,7 @@ const MovieListing = () => {
             <div className="description">
               <p>{movies[movieRandom].overview}</p>
             </div>
-            <div className="cover-btns">
+            <div className="btns-container">
               <button>View</button>
               <button>+ My List</button>
             </div>
