@@ -53,13 +53,13 @@ h2 {
   text-decoration: underline;
 }
 
-.back-drop {
+.cover-movie {
   width: 100%;
   height: 650px;
   margin: auto;
 }
 
-.back-drop h2 {
+.overlay {
   position: absolute;
   width: 100%;
   height: 700px;
@@ -70,22 +70,62 @@ h2 {
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 1) 15%,
-    rgba(0, 0, 0, .65) 25%,
+    rgba(0, 0, 0, 0.65) 25%,
     rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, .65) 75%,
+    rgba(0, 0, 0, 0.65) 75%,
     rgba(0, 0, 0, 1) 85%
   );
 }
 
-.discription {
-  display: inline;
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: absolute;
-
+  top: 25%;
 }
 
-.cover {
+.title {
+  text-align: left;
+  margin-left: 9rem;
+  margin-bottom: 3rem;
+  max-width: 350px;
+}
+
+.title p {
+  display: inline;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.description {
+  text-align: left;
+  margin-left: 9rem;
+  max-width: 350px;
+}
+
+.description p {
+  display: inline;
+  font-size: .8rem;
+}
+
+.cover-movie img {
   object-fit: cover;
   width: 85%;
   height: 100%;
   object-position: center;
+}
+
+.cover-btns {
+  margin-left: 9rem;
+  margin-top: 3rem;
+}
+
+.cover-btns button {
+  padding: .7rem 1.6rem;
+  margin-right: 1.5rem;
+  background-color: #9681ff;
+  color: white;
+  font-size: 1rem;
+  border: 1px solid #9681ff;
 }

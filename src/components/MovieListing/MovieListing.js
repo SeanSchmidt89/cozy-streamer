@@ -42,16 +42,23 @@ const MovieListing = () => {
   return (
     <div>
       {movies.length > 0 && (
-        <div className="back-drop">
-          <div className="hi"></div>
-          <h2>{movies[movieRandom].title}</h2>
+        <div className="cover-movie">
+          <div className="overlay"></div>
           <img
-            className="cover"
             src={`https://image.tmdb.org/t/p/original/${movies[movieRandom].backdrop_path}`}
             alt={movies[movieRandom].title}
           />
-          <div className="discription">
-            <p>{movies[movieRandom].overview}</p>
+          <div className="info">
+            <div className="title">
+              <p>{movies[movieRandom].title}</p>
+            </div>
+            <div className="description">
+              <p>{movies[movieRandom].overview}</p>
+            </div>
+            <div className="cover-btns">
+              <button>View</button>
+              <button>+ My List</button>
+            </div>
           </div>
         </div>
       )}
