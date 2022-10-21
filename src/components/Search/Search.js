@@ -24,7 +24,7 @@ const Search = () => {
     setInputText("");
   };
   return (
-    <div>
+    
       <div className="search">
         <form onSubmit={searchHandler}>
           <input
@@ -37,7 +37,6 @@ const Search = () => {
           </button>
         </form>
       </div>
-    </div>
   );
 };
 

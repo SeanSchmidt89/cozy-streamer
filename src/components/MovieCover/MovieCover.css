@@ -40,24 +40,26 @@
 .title {
   text-align: left;
   margin-left: 8rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
   max-width: 350px;
 }
 
 .title p {
   display: inline;
-  font-size: 2.1rem;
+  font-size: 2.3rem;
 }
 
 .description {
   text-align: left;
   margin-left: 8rem;
   max-width: 350px;
+  line-height: 1.6;
 }
 
 .description p {
   display: inline;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .btns-container {
@@ -86,7 +88,7 @@
 
 .rating{
   color:white;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-left: 8rem;
   margin-top: 1.5rem;
 }
@@ -134,24 +136,26 @@
   .title {
     text-align: left;
     margin-left: 4rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.6rem;
     max-width: 320px;
   }
   
   .title p {
     display: inline;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
   }
   
   .description {
     text-align: left;
     margin-left: 4rem;
     max-width: 320px;
+    line-height: 1.1;
   }
   
   .description p {
     display: inline;
     font-size: 0.8rem;
+    line-height: 1.1;
   }
   
   .btns-container {
@@ -196,35 +200,38 @@
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 15%;
+    top: 20%;
   }
 
   .title {
     text-align: left;
     margin-left: 2rem;
-    margin-bottom: 2.2rem;
-    max-width: 180px;
+    margin-bottom: 0.7rem;
+    max-width: 190px;
   }
   
   .title p {
     display: inline;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   
   .description {
     text-align: left;
     margin-left: 2rem;
-    max-width: 180px;
+    max-width: 190px;
+    line-height: 0.9;
   }
   
   .description p {
     display: inline;
     font-size: 0.6rem;
+    line-height: 0.9;
+    
   }
   
   .btns-container {
     margin-left: 2rem;
-    margin-top: 1.6rem;
+    margin-top: 1.2rem;
   }
   
   .btns-container button {
@@ -248,9 +255,9 @@
 
   .rating{
     color:white;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-left: 2rem;
-    margin-top: 1.6rem;
+    margin-top: 1.1rem;
   }
 }
 

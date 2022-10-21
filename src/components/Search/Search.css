@@ -37,7 +37,7 @@
     .search {
         display: flex;
         justify-content: center;
-        margin-left: 12rem;
+        margin: auto;
         padding-top: 3.5rem;
         padding-bottom: 1rem;
       }
@@ -48,6 +48,7 @@
         display: flex;
         justify-content:center;
         align-items: center;
+        margin: auto;
       }
       
       .search input {
