@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/moive-details/imdbID" element={<MovieDetails />} />
+        <Route path="/movie-details/:id" element={<MovieDetails />} />
       </Routes>
       <Footer />
     </div>

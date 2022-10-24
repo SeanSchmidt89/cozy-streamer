@@ -2,9 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   popular: [],
+  search: [],
   topRated: [],
   latest: [],
-  search: [],
+  details: {},
   random: [],
 };
 
@@ -24,6 +25,9 @@ const movieSlice = createSlice({
     addLatest: (state, action) => {
       state.latest = action.payload;
     },
+    addDetails: (state, action) => {
+      state.details = action.payload
+    }
   },
 });
 

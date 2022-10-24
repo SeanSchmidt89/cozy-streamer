@@ -33,9 +33,6 @@ const MovieListing = () => {
     });
   }, [dispatch]);
 
-  console.log("topRated obj", latest);
-  console.log("toprated length", latest.length);
-
   return (
     <div>
       <MovieCover />
