@@ -22,12 +22,31 @@ const MovieDetails = () => {
       })
       .catch((error) => console.log("error", error));
   }, [id, dispatch]);
+  let genres = details.genres;
+  let runtime = details.runtime;
+  let overview = details.overview;
+  let realeaseDate = details.release_date;
+  let status = details.status;
+  let voteAverage = details.vote_average * 10
   return (
     <div className="details">
       <div className="details-overlay"></div>
-      <img src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`} alt={details.title}/>
-      <div className="detail-info"></div>
-      {details.title}
+      <img
+        src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`}
+        alt={details.title}
+      />
+      <div className="detail-info">
+        <p>{details.title}</p>
+        <div><ul>Genres :
+          {details.genres &&
+            genres.map((item, index) => <li key={index}>{item.name}</li>)}</ul>
+        </div>
+        <div>{runtime && <p>Run time: {runtime}mins</p>}</div>
+        <div>{overview && <p>{overview}</p>}</div>
+        <div>{realeaseDate && <p>realease date: {realeaseDate}</p>}</div>
+        <div>{voteAverage && <p>Rating {voteAverage}%</p>}</div>
+        <div>{status && <p>Status:  {status}</p>}</div>
+      </div>
     </div>
   );
 };

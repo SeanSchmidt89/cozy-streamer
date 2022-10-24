@@ -26,3 +26,22 @@
     object-position: center;
 }
 
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 20%;
+}
+
+.detail-info ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.detail-info li {
+    margin-left: 0.7rem;
+}
