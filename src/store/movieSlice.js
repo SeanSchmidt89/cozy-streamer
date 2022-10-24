@@ -26,8 +26,8 @@ const movieSlice = createSlice({
       state.latest = action.payload;
     },
     addDetails: (state, action) => {
-      state.details = action.payload
-    }
+      state.details = action.payload;
+    },
   },
 });
 

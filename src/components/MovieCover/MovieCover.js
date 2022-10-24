@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import MovieDetails from ".././MovieDetails/MovieDetails";
 import "./MovieCover.css";
 
 const MovieCover = () => {
@@ -10,7 +9,6 @@ const MovieCover = () => {
 
   return (
     <div>
-      <MovieDetails />
       {movies.length > 0 && (
         <div className="cover-movie">
           <div className="overlay"></div>
