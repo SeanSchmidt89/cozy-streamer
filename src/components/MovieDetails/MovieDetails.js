@@ -53,11 +53,14 @@ const MovieDetails = () => {
           <ul>
             <li>
               {details.genres &&
-                genres.map((item, index) => (
-                  <span key={index}>{item.name}</span>
-                ))}
+                genres.map((item, index) => {
+                  if (index === genres.length - 1) {
+                    return <span key={index}>{item.name}</span>;
+                  }
+                  return <span key={index}>{item.name},</span>;
+                })}
             </li>
-            {runtime && <li>{runtime}mins</li>}
+            {runtime && <li>{runtime} mins</li>}
             {voteAverage && <li>Rating {voteAverage}%</li>}
             {status && (
               <li>
