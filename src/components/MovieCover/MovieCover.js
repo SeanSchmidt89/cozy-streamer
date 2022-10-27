@@ -1,11 +1,24 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { movieSliceActions } from "../../store/movieSlice";
 import { Link } from "react-router-dom";
 import "./MovieCover.css";
 
 const MovieCover = () => {
+  const dispatch = useDispatch();
+  const [toggleFav, setToggleFav] = useState(false);
   const movies = useSelector((state) => state.movies.popular);
-  const movieRandom = Math.floor(Math.random() * movies.length + 1);
+  const movieRandom = useSelector((state) => state.movies.random)
+
+  useEffect(() => {
+    dispatch(
+      movieSliceActions.random(Math.floor(Math.random() * movies.length + 1))
+    );
+  }, [dispatch, movies.length]);
+  const favoritesHandler = (e) => {
+    dispatch(movieSliceActions.addFavorites(movies[movieRandom]));
+    setToggleFav(true);
+  };
 
   return (
     <div>
@@ -27,7 +40,8 @@ const MovieCover = () => {
               <Link to={`movie-details/${movies[movieRandom].id}`}>
                 <button>View</button>
               </Link>
-              <button>+ My List</button>
+              <button onClick={favoritesHandler}>+ My List</button>
+              {toggleFav && <span className="added">✔ Added</span>}
             </div>
             <div className="rating">
               {<p>Rating {movies[movieRandom].vote_average * 10}%</p>}

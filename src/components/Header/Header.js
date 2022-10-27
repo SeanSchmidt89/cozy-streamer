@@ -14,8 +14,8 @@ const Header = () => {
         <Link className="link" to="/">
           Home
         </Link>
-        <Link className="link" to="/">
-          Fav's
+        <Link className="link" to="/favorites">
+          Favorites
         </Link>
         <Link className="link" to="/">
           About

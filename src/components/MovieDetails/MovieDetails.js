@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { movieSliceActions } from "../../store/movieSlice";
@@ -8,10 +8,17 @@ import axios from "axios";
 import "./MovieDetails.css";
 
 const MovieDetails = () => {
+  const [toggleFav, setToggleFav] = useState(false);
   const { id } = useParams();
   const dispatch = useDispatch();
   const details = useSelector((state) => state.movies.details);
   const related = useSelector((state) => state.movies.related);
+
+  const favoritesHandler = (e) => {
+    dispatch(movieSliceActions.addFavorites(details));
+    setToggleFav(true);
+  };
+
   useEffect(() => {
     axios
       .get(
@@ -69,6 +76,12 @@ const MovieDetails = () => {
             )}
           </ul>
           <div className="detail-overview">{overview && <p>{overview}</p>}</div>
+          <div>
+            <button className="detail-btn" onClick={favoritesHandler}>
+              + My List
+            </button>
+            {toggleFav && <span className="detail-added">✔ Added</span>}
+          </div>
         </div>
         <div className="detail-poster">
           <img
