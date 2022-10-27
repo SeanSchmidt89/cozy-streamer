@@ -6,7 +6,7 @@ const initialState = {
   topRated: [],
   latest: [],
   details: {},
-  random: [],
+  related: [],
 };
 
 const movieSlice = createSlice({
@@ -27,6 +27,9 @@ const movieSlice = createSlice({
     },
     addDetails: (state, action) => {
       state.details = action.payload;
+    },
+    addRelated: (state, action) => {
+      state.related = action.payload;
     },
   },
 });
