@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 
 const Header = () => {
+  const [sideNav, setSideNav] = useState(false);
+  const toggleSideNav = (e) => {
+    setSideNav(!sideNav);
+  };
   return (
     <div className="header">
       <div className="left">
@@ -21,6 +26,28 @@ const Header = () => {
           About
         </Link>
       </div>
+      {sideNav && (
+        <div className="nav-side">
+          <Link className="link" to="/" onClick={toggleSideNav}>
+            Home
+          </Link>
+          <Link className="link" to="/favorites" onClick={toggleSideNav}>
+            Favorites
+          </Link>
+          <Link className="link" to="/" onClick={toggleSideNav}>
+            About
+          </Link>
+        </div>
+      )}
+      {!sideNav ? (
+        <div className="hamburger">
+          <FaBars onClick={toggleSideNav} size={20} />
+        </div>
+      ) : (
+        <div className="close-btn">
+          <FaTimes onClick={toggleSideNav} size={20} />
+        </div>
+      )}
     </div>
   );
 };
