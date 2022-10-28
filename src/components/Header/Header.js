@@ -15,8 +15,8 @@ const Header = () => {
           COZY STREAMER
         </Link>
       </div>
-      <div className="nav">
-        <Link className="link" to="/">
+      <div className={sideNav ? 'nav-active' : 'nav'}>
+        <Link className="link" to="/" onClick={toggleSideNav}>
           Home
         </Link>
         <Link className="link" to="/favorites">
@@ -26,19 +26,6 @@ const Header = () => {
           About
         </Link>
       </div>
-      {sideNav && (
-        <div className="nav-side">
-          <Link className="link" to="/" onClick={toggleSideNav}>
-            Home
-          </Link>
-          <Link className="link" to="/favorites" onClick={toggleSideNav}>
-            Favorites
-          </Link>
-          <Link className="link" to="/" onClick={toggleSideNav}>
-            About
-          </Link>
-        </div>
-      )}
       {!sideNav ? (
         <div className="hamburger">
           <FaBars onClick={toggleSideNav} size={20} />
