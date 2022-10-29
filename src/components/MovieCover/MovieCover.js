@@ -8,16 +8,21 @@ const MovieCover = () => {
   const dispatch = useDispatch();
   const [toggleFav, setToggleFav] = useState(false);
   const movies = useSelector((state) => state.movies.popular);
-  const movieRandom = useSelector((state) => state.movies.random)
+  const movieRandom = useSelector((state) => state.movies.random);
 
   useEffect(() => {
     dispatch(
       movieSliceActions.random(Math.floor(Math.random() * movies.length + 1))
     );
   }, [dispatch, movies.length]);
+
+
   const favoritesHandler = (e) => {
     dispatch(movieSliceActions.addFavorites(movies[movieRandom]));
     setToggleFav(true);
+    setTimeout(() => {
+      setToggleFav(false);
+    }, 2500);
   };
 
   return (

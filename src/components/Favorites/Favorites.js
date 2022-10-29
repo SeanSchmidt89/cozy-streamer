@@ -6,15 +6,13 @@ import "./Favorites.css";
 const Favorites = () => {
   const favs = useSelector((state) => state.movies.favorites);
   return (
-    <div>
+    <div className="favorites">
       <h2>My Favorites</h2>
       <div className="container">
-        {favs.length > 0 ? (
-          favs.map((item, index) => <MovieCard key={index} item={item} />)
-        ) : (
-          <p>You have no Favorites added...</p>
-        )}
+        {favs.length > 0 &&
+          favs.map((item, index) => <MovieCard key={index} item={item} />)}
       </div>
+      {favs.length < 1 && <p className="no-favs">You have no Favorites added...</p>}
     </div>
   );
 };

@@ -1,0 +1,12 @@
+h2 {
+    margin-top: 3rem;
+}
+
+.no-favs {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.favorites {
+    min-height: 450px;
+}

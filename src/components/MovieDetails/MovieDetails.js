@@ -17,6 +17,9 @@ const MovieDetails = () => {
   const favoritesHandler = (e) => {
     dispatch(movieSliceActions.addFavorites(details));
     setToggleFav(true);
+    setTimeout(() => {
+      setToggleFav(false);
+    }, 2500);
   };
 
   useEffect(() => {

@@ -19,10 +19,10 @@ const Header = () => {
         <Link className="link" to="/" onClick={toggleSideNav}>
           Home
         </Link>
-        <Link className="link" to="/favorites">
+        <Link className="link" to="/favorites" onClick={toggleSideNav}>
           Favorites
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/about" onClick={toggleSideNav}>
           About
         </Link>
       </div>

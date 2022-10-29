@@ -104,8 +104,8 @@ li span {
 
 .detail-added {
   margin-left: 1.2rem;
-  font-size: 0.9rem;
-  color: #9681ff;
+  font-size: 1rem;
+  color: white;
 }
 
 
@@ -204,7 +204,7 @@ li span {
     flex-direction: row;
     align-items: flex-start;
     list-style: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-bottom: 3.3rem;
     padding-bottom: 0.8rem;
     border-bottom: 2px solid #866ff9;
@@ -226,7 +226,7 @@ li span {
 
   .detail-poster {
     position: absolute;
-    top: 39%;
+    top: 42%;
     right: 4rem;
     margin: auto;
     height: 360px;
@@ -317,7 +317,7 @@ li span {
     
       .detail-poster {
         position: absolute;
-        top: 21%;
+        top: 23%;
         right: 2.6rem;
         height: 150px;
         width: 115px;
@@ -355,7 +355,7 @@ li span {
       .detail-added {
         margin-left: 0.8rem;
         font-size: 0.7rem;
-        color: #9681ff;
+        color: white;
       }
       
 }
