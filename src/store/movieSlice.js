@@ -34,7 +34,8 @@ const movieSlice = createSlice({
       state.related = action.payload;
     },
     addFavorites: (state, action) => {
-      state.favorites = [...state.favorites, action.payload];
+      let filteredFavorites = state.favorites.filter((item) => item.id !== action.payload.id)
+      state.favorites = [...filteredFavorites, action.payload];
     },
     random: (state, action) => {
       state.random = action.payload

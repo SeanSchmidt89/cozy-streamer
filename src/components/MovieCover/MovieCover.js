@@ -16,7 +16,6 @@ const MovieCover = () => {
     );
   }, [dispatch, movies.length]);
 
-
   const favoritesHandler = (e) => {
     dispatch(movieSliceActions.addFavorites(movies[movieRandom]));
     setToggleFav(true);
@@ -24,7 +23,6 @@ const MovieCover = () => {
       setToggleFav(false);
     }, 2500);
   };
-
   return (
     <div>
       {movies.length > 0 && (
