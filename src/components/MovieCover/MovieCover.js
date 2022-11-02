@@ -12,7 +12,7 @@ const MovieCover = () => {
 
   useEffect(() => {
     dispatch(
-      movieSliceActions.random(Math.floor(Math.random() * movies.length + 1))
+      movieSliceActions.random(Math.floor(Math.random() * movies.length))
     );
   }, [dispatch, movies.length]);
 
