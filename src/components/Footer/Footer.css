@@ -1,8 +1,237 @@
 .footer {
-  height: 200px;
+  height: 220px;
   width: 100%;
   margin-top: 6rem;
-  background-color: #866FF9;;
+  background-color: #866ff9;
   color: white;
-  text-align: center;
+}
+
+.footer .container {
+  width: 1100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.footer .left {
+  width: 70%;
+  height: 40%;
+  border-right: 3px solid white;
+}
+
+.left p {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.9rem;
+  text-decoration: none;
+}
+
+.footer .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.right .link {
+  padding: 0 1.2rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer {
+    height: 220px;
+    width: 100%;
+    margin-top: 3rem;
+    background-color: #866ff9;
+    color: white;
+  }
+
+  .footer .container {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .footer .left {
+    width: 70%;
+    height: 40%;
+    border-right: 3px solid white;
+  }
+
+  .left p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0.6rem;
+    text-decoration: none;
+  }
+
+  .footer .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+  }
+
+  .right .link {
+    padding: 0 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    height: 220px;
+    width: 100%;
+    margin-top: 3rem;
+    background-color: #866ff9;
+    color: white;
+  }
+
+  .footer .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .footer .left {
+    width: 100%;
+    height: 100%;
+    border-right: none;
+  }
+
+  .left p {
+    margin-top: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .footer .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+  }
+
+  .right .link {
+    padding: 0 0.9rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .footer {
+    height: 220px;
+    width: 100%;
+    margin-top: 3rem;
+    background-color: #866ff9;
+    color: white;
+  }
+
+  .footer .container {
+    width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .footer .left {
+    width: 70%;
+    height: 40%;
+    border-right: 3px solid white;
+  }
+
+  .left p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0.6rem;
+    text-decoration: none;
+  }
+
+  .footer .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+  }
+
+  .right .link {
+    padding: 0 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer {
+    height: 220px;
+    width: 100%;
+    margin-top: 3rem;
+    background-color: #866ff9;
+    color: white;
+  }
+
+  .footer .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: none;
+  }
+
+  .footer .left {
+    width: 100%;
+    height: 100%;
+    border-right: none;
+  }
+
+  .left p {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .footer .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    font-weight: 400;
+  }
+
+  .right .link {
+    padding: 0 0.7rem;
+    margin: 0;
+    font-size: 0.6rem;
+  }
 }
