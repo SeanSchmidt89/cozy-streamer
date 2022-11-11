@@ -14,26 +14,28 @@
 }
 
 .link {
-  padding: 0.8rem;
-  font-size: 0.9rem;
+  padding: 0.6rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
 .sign-up {
-  height: 29px;
-  width: 66px;
+  height: 25px;
+  width: 64px;
   background-color: black;
   color: white;
+  font-size: 0.7rem;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
 }
 
 .sign-out {
-  height: 29px;
-  width: 66px;
+  height: 25px;
+  width: 64px;
   background-color: black;
   color: white;
+  font-size: 0.7rem;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
@@ -127,4 +129,29 @@
     transition: 1s;
     color: #866ff9;
   }
+
+  .log-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .log-btns .link {
+    width: 200px;
+  }
+
+  .link .sign-up {
+    width: 200px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
+
+  .sign-out {
+    width: 200px;
+    height: 50px;
+    margin: 1rem;
+    font-size: 1.8rem;
+  }
+
 }

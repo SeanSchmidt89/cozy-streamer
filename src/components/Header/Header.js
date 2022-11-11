@@ -14,6 +14,7 @@ const Header = () => {
 
   const signOutHandler = () => {
     logOut();
+    toggleSideNav()
   };
   return (
     <div className="header">
@@ -37,11 +38,11 @@ const Header = () => {
             Sign out
           </button>
         ) : (
-          <div>
-            <Link className="link" to="/login">
+          <div className='log-btns'>
+            <Link className="link" to="/login" onClick={toggleSideNav}>
               Sign In
             </Link>
-            <Link className="link" to="/signup">
+            <Link className="link" to="/signup" onClick={toggleSideNav}>
               <button className="sign-up">Sign Up</button>
             </Link>
           </div>
