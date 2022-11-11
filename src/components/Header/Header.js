@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
+
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 
 const Header = () => {
   const [sideNav, setSideNav] = useState(false);
+  const { user, logOut } = UserAuth();
   const toggleSideNav = (e) => {
     setSideNav(!sideNav);
+  };
+
+  const signOutHandler = () => {
+    logOut();
   };
   return (
     <div className="header">
@@ -22,13 +29,23 @@ const Header = () => {
         <Link className="link" to="/favorites" onClick={toggleSideNav}>
           Favorites
         </Link>
-        <Link className="link" to="/about" onClick={toggleSideNav}>
+        {/* <Link className="link" to="/about" onClick={toggleSideNav}>
           About
-        </Link>
-        <Link className="link" to='/login'>Sign In</Link>
-        <Link className="link" to="/signup">
-          <button className="sign-up">Sign Up</button>
-        </Link>
+        </Link> */}
+        {user ? (
+          <button onClick={signOutHandler} className="sign-out">
+            Sign out
+          </button>
+        ) : (
+          <div>
+            <Link className="link" to="/login">
+              Sign In
+            </Link>
+            <Link className="link" to="/signup">
+              <button className="sign-up">Sign Up</button>
+            </Link>
+          </div>
+        )}
       </div>
       {!sideNav ? (
         <div className="hamburger">

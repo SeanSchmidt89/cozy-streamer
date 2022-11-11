@@ -29,6 +29,16 @@
   cursor: pointer;
 }
 
+.sign-out {
+  height: 29px;
+  width: 66px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .home-link {
   font-size: 2.1rem;
   font-weight: 600;
