@@ -39,7 +39,7 @@ const LogIn = () => {
               type="password"
               placeholder="password"
             />
-            <button type="submit">Sign Up</button>
+            <button type="submit">Log In</button>
           </form>
           <p>
             Dont have an account?{" "}

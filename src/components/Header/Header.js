@@ -38,8 +38,8 @@ const Header = () => {
             Sign out
           </button>
         ) : (
-          <div className='log-btns'>
-            <Link className="link" to="/login" onClick={toggleSideNav}>
+          <div className='log-btns'onClick={toggleSideNav}>
+            <Link className="link" to="/login" >
               Sign In
             </Link>
             <Link className="link" to="/signup" onClick={toggleSideNav}>

@@ -54,6 +54,11 @@
   display: none;
 }
 
+.nav-active {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 725px) {
   .header {
     padding: 0 1.3rem;
