@@ -14,10 +14,16 @@ const Footer = () => {
           <a href="https://github.com/SeanSchmidt89" className="link">
             <BsGithub size={18} />
           </a>
-          <a href="https://www.linkedin.com/in/sean-schmidt-018459239/" className="link">
+          <a
+            href="https://www.linkedin.com/in/sean-schmidt-018459239/"
+            className="link"
+          >
             <BsLinkedin size={18} />
           </a>
-          <a href="https://github.com/SeanSchmidt89/cozy-streamer" className="link">
+          <a
+            href="https://github.com/SeanSchmidt89/cozy-streamer"
+            className="link"
+          >
             VIEW CODE
           </a>
           <a href="https://www.themoviedb.org/" className="link">
