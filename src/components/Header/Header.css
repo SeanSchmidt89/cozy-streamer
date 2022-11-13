@@ -149,6 +149,8 @@
   .link .sign-up {
     width: 200px;
     height: 50px;
+    background-color: transparent;
+    border: none;
     font-size: 1.8rem;
   }
 

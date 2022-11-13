@@ -26,7 +26,7 @@
     margin: 2.3rem auto;
   }
   
-  h2 {
+  .form-container h2 {
     margin: 4rem 0 2rem 0;
     font-size: 2.3rem;
     text-decoration: none;
@@ -94,4 +94,95 @@
     margin-left: 0.3rem;
     font-weight: 500;
     text-decoration: underline;
+  }
+
+  @media screen and (max-width: 725px){
+    .login .login-container {
+      margin: 8rem;
+      border-radius: 12px;
+      background-color: black;
+      border: 2px solid white;
+      width: 340px;
+      height: 500px;
+      box-shadow: #866ff9 0px 11px 40px 6px;
+      transition: 3s;
+    }
+    
+    .form-container {
+      width: 280px;
+      height: 380px;
+      margin: 2.3rem auto;
+    }
+  
+    .form-container h2 {
+      margin: 4rem 0 4rem 1rem;
+      font-size: 2rem;
+      color: white;
+    }
+    
+    .form-container input {
+      margin: 0.4rem 0;
+      padding: 0.7rem;
+      background-color: rgb(85, 85, 85);
+      color: #f4f4f4;
+      border-radius: 4px;
+      outline: none;
+      border: 2px solid rgb(85, 85, 85);
+      box-shadow: none;
+    }
+    
+    .form-container input:focus {
+      margin: 0.4rem 0;
+      padding: 0.7rem;
+      background-color: rgb(85, 85, 85);
+      color: #f4f4f4;
+      border-radius: 4px;
+      outline: none;
+      border: 2px solid rgb(205, 205, 205);
+      box-shadow: none;
+    }
+    
+    .login-in-form {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin: auto;
+    }
+    
+    .login-in-form button {
+      height: 42px;
+      margin: 1.2rem 0;
+      background-color: #26272b;
+      border-color: #26272b;
+      color: #866ff9;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+  
+    .login-in-form button:hover {
+      height: 42px;
+      margin: 1.2rem 0;
+      background-color: #323336;
+      border-color: #323336;
+      color: #866ff9;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    
+    .form-container p {
+      display: inline;
+      margin: 1.1rem 0 0 0;
+      color: rgb(201, 201, 201);
+      font-size: 0.8rem;
+      text-align: left;
+    }
+    
+    .form-container span {
+      font-size: 0.8rem;
+      margin-left: 0.3rem;
+      font-weight: 500;
+      text-decoration: underline;
+    }
   }

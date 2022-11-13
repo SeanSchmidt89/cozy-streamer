@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -40,7 +40,7 @@ const Header = () => {
         ) : (
           <div className='log-btns'onClick={toggleSideNav}>
             <Link className="link" to="/login" >
-              Sign In
+              Login
             </Link>
             <Link className="link" to="/signup" onClick={toggleSideNav}>
               <button className="sign-up">Sign Up</button>
