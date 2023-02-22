@@ -14,7 +14,7 @@ const Header = () => {
 
   const signOutHandler = () => {
     logOut();
-    toggleSideNav()
+    toggleSideNav();
   };
   return (
     <div className="header">
@@ -38,8 +38,8 @@ const Header = () => {
             Sign out
           </button>
         ) : (
-          <div className='log-btns'onClick={toggleSideNav}>
-            <Link className="link" to="/login" >
+          <div className="log-btns" onClick={toggleSideNav}>
+            <Link className="link" to="/login">
               Login
             </Link>
             <Link className="link" to="/signup" onClick={toggleSideNav}>
@@ -62,3 +62,13 @@ const Header = () => {
 };
 
 export default Header;
+
+function repetition(txt, n) {
+	if(n <= 1){
+    return txt
+  }
+
+  return txt + repetition(txt, n -1)
+}
+
+repetition("cherry", 4)
